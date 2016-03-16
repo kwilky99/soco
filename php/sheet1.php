@@ -6,9 +6,9 @@ include '../html/header.html';
 	//validate data
 	//max values (x > 0 and x < 100)
 
-//clean data 
+//clean data
 
-//Dropdowns 
+//Dropdowns
 //table loop   ---  $days is days in the month they select
 //they pick month/year and I give day count (for loop)
 //when storing date: must combine month and year they choose + day in loop
@@ -46,7 +46,7 @@ echo <<< END
 				<th>Fuel<br>gallons</th>
 				<th>Cost</th>
 			</tr>
-		</tfoot> 
+		</tfoot>
 		<tbody>
 END;
 //use class for alternate css themes for light/dark rows
@@ -55,21 +55,23 @@ END;
 			$field1Name = "mDesc".$tableCount;
 			$field2Name = "fuel".$tableCount;
 			$field3Name = "cost".$tableCount;
-			
+
+
+
 			echo "<tr>
 				<td>$tableCount</td>
-				<td><input id=$field1Name></td>
-				<td><input id=$field2Name></td>
-				<td><input id=$field3Name></td>
+				<td><input id=$field1Name name=""></td>
+				<td><input id=$field2Name name=""></td>
+				<td><input id=$field3Name name=""></td>
 			</tr>";
 		}
 		echo"</tbody>";
-	echo"</table>"; 
+	echo"</table>";
 	echo"</section>";
-}  
+}
 	//echo $monthDays;
 //insert save functionality
-//Link for loop saving in mysql: http://stackoverflow.com/questions/28619676/save-mysql-while-loop-data-into-arrays-and-then-save-into-database 
+//Link for loop saving in mysql: http://stackoverflow.com/questions/28619676/save-mysql-while-loop-data-into-arrays-and-then-save-into-database
 echo "<input type='hidden' name='hdn_posted' value=1>";
 include '../html/footer.html';
 //include another hidden field to show 'who posted me' -- look at ORG CHART
@@ -81,7 +83,7 @@ include '../html/footer.html';
 
 
 //Storage-----------
-//Need to loop through the array, but loop through the different attributes 
+//Need to loop through the array, but loop through the different attributes
 //and store in individual local arrays.  SQL+PHP should look something like the following:
 //Each value is increased in number (inside the loop) so you can call the same $x inside array.
 /*

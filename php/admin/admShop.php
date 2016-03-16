@@ -19,7 +19,7 @@ if (!$result) {
 $i = $result->num_rows;
 for($x=0; $x <=$i; $x++){
 	$row = $result->fetch_array(MYSQLI_ASSOC);
-	$shopA[$x] = $row['shop_code']; 
+	$shopA[$x] = $row['shop_code'];
 	$locationA[$x] = $row['location_id'];
 }
 
@@ -33,7 +33,7 @@ for($x=0; $x <=$i; $x++){
 	echo '<select id=\'admShop\' name=\'admShop\'>>';
 		for($x=0; $x <= $i; $x++){
 			$row = $result->fetch_array(MYSQLI_ASSOC);
-			$shop = $row['shop_code']; 
+			$shop = $row['shop_code'];
 			$shopLoc = $row['location_id'];
 			echo '<option value='.$x;
 			if (isset($_POST['admShop'])){
@@ -44,7 +44,7 @@ for($x=0; $x <=$i; $x++){
 			echo '>'.$shop.'</option>';
 		}
 	//var_dump($result);
-	
+
 echo '</select>';
 echo "<input type='submit' name='button1'  value='Submit'>";  //on-click action difference between different buttons
 */
